@@ -1,5 +1,6 @@
 package com.rafaelbarreto.alzheimerscares
 
+import android.Manifest
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -11,10 +12,17 @@ import android.view.MenuItem
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import org.jetbrains.anko.alert
+import com.maxcruz.reactivePermissions.ReactivePermissions
+import com.maxcruz.reactivePermissions.entity.Permission
+import org.jetbrains.anko.*
+
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    //External lib for request permissions
+    private val REQUEST_CODE = 554
+    val reacPermission = ReactivePermissions(this, REQUEST_CODE)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +30,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            alert("LIIGOU PRA UM NUMERO DE EMERGENCIA!").show()
+            makeCallPhone()
+            //alert("LIIGOU PRA UM NUMERO DE EMERGENCIA!").show()
         }
 
         val toggle = ActionBarDrawerToggle(
@@ -90,6 +99,50 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .replace(R.id.main_content, fragment)
                 .commit()
 
+    }
+
+    private fun makeCallPhone(){
+        val phone = Permission(
+                Manifest.permission.CALL_PHONE,
+                R.string.request_call_phone,
+                true
+        )
+
+        val permissions = listOf( phone )
+
+        reacPermission.observeResultPermissions().subscribe{
+            event ->
+            if (event.second) {
+                makeCall("999887766")
+            }
+        }
+
+        reacPermission.observeResultPermissions().subscribe{
+            event ->
+            if (event.first == Manifest.permission.CALL_PHONE
+                    && event.second) {
+
+                makeCall("999887766")
+            }
+            else if (event.first == Manifest.permission.SEND_SMS
+                    && event.second) {
+                sendSMS("999887766")
+            }
+        }
+
+        reacPermission.evaluate(permissions)
+    }
+
+
+    override fun onRequestPermissionsResult(
+            requestCode: Int,
+            permissions: Array<String>,
+            grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        if( requestCode == REQUEST_CODE ){
+            reacPermission.receive(permissions, grantResults)
+        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

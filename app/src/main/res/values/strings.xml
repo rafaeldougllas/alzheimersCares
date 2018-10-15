@@ -1,4 +1,5 @@
 <resources>
+    <!-- General -->
     <string name="app_name">Alzheimers Cares</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -7,14 +8,28 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-
+    <!-- Menu Items -->
     <string name="menu_about">About</string>
     <string name="menu_tips">Tips</string>
     <string name="menu_personal_informations">Personal Informations</string>
     <string name="menu_reminders">Reminders</string>
     <string name="menu_useful_links">Useful Links</string>
+    <!-- Menu About Items -->
+    <string name="menu_about_what_is">What is?</string>
+    <string name="menu_about_symptoms">Symptoms</string>
+    <string name="menu_about_diagnostic">Diagnostic</string>
+    <string name="menu_about_treatment">Treatment</string>
+    <string name="menu_about_stages">Stages</string>
+    <string name="menu_about_research">Researches</string>
+    <string name="menu_about_dementia">Dementia</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Requests -->
+    <string name="request_call_phone">Accept permission to make the call</string>
+    <string name="text_what_is">"  A Doença de Alzheimer é uma enfermidade incurável que se agrava ao longo do tempo, mas pode e deve ser tratada. Quase todas as suas vítimas são pessoas idosas. Talvez, por isso, a doença tenha ficado erroneamente conhecida como “esclerose” ou “caduquice”.  A doença se apresenta como demência, ou perda de funções cognitivas (memória, orientação, atenção e linguagem), causada pela morte de células cerebrais. Quando diagnosticada no início, é possível retardar o seu avanço e ter mais controle sobre os sintomas, garantindo melhor qualidade de vida ao paciente e à família.  Seu nome oficial refere-se ao médico Alois Alzheimer, o primeiro a descrever a doença, em 1906. Ele estudou e publicou o caso da sua paciente Auguste Deter, uma mulher saudável que, aos 51 anos, desenvolveu um quadro de perda progressiva de memória, desorientação, distúrbio de linguagem (com dificuldade para compreender e se expressar), tornando-se incapaz de cuidar de si. Após o falecimento de Auguste, aos 55 anos, o Dr. Alzheimer examinou seu cérebro e descreveu as alterações que hoje são conhecidas como características da doença.  Não se sabe por que a Doença de Alzheimer ocorre, mas são conhecidas algumas lesões cerebrais características dessa doença. As duas principais alterações que se apresentam são as placas senis decorrentes do depósito de proteína beta-amiloide, anormalmente produzida, e os emaranhados neurofibrilares, frutos da hiperfosforilação da proteína tau. Outra alteração observada é a redução do número das células nervosas (neurônios) e das ligações entre elas (sinapses), com redução progressiva do volume cerebral.  Estudos recentes demonstram que essas alterações cerebrais já estariam instaladas antes do aparecimento de sintomas demenciais. Por isso, quando aparecem as manifestações clínicas que permitem o estabelecimento do diagnóstico, diz-se que teve início a fase demencial da doença.  As perdas neuronais não acontecem de maneira homogênea. As áreas comumente mais atingidas são as de células nervosas (neurônios) responsáveis pela memória e pelas funções executivas que envolvem planejamento e execução de funções complexas. Outras áreas tendem a ser atingidas, posteriormente, ampliando as perdas.  Estima-se que existam no mundo cerca de 35,6 milhões de pessoas com a Doença de Alzheimer. No Brasil, há cerca de 1,2 milhão de casos, a maior parte deles ainda sem diagnóstico. "</string>
+    <string name="text_what_is_link">http://abraz.org.br/web/sobre-alzheimer/o-que-e-alzheimer/</string>
+
+
+    <!-- Texts about Alzheimer -->
+
 
 </resources>
