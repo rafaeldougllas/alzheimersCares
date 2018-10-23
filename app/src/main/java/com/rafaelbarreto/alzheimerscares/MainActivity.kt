@@ -87,6 +87,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 UsefulLinksFragment()
             }
             R.id.nav_share -> {
+                share("baixe o app em: https://play.google.com/store", "[Alzheimer's Care]")
                 AboutFragment()
             }
             else -> {

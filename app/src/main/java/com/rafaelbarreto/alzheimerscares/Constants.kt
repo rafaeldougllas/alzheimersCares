@@ -9,5 +9,7 @@ class Constants {
         val CARD_STAGES      = 5
         val CARD_RESEARCHES  = 6
         val CARD_DEMENTIA    = 7
+
+        val CARD_NUMBER_CLICKED = "CARD_NUMBER_CLICKED"
     }
 }

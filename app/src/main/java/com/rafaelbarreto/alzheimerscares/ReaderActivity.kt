@@ -30,7 +30,7 @@ class ReaderActivity : AppCompatActivity() {
         var readerLink    = ""
         //Recovery the object passed on intent
         if(intent.extras != null){
-            valueText  = intent.extras.getInt("TEXT_TO_READ")
+            valueText  = intent.extras.getInt(Constants.CARD_NUMBER_CLICKED)
 
             when(valueText){
                 Constants.CARD_WHAT_IS -> {
@@ -39,19 +39,19 @@ class ReaderActivity : AppCompatActivity() {
                     readerLink    = resources.getString(R.string.text_what_is_link)
                 }
                 Constants.CARD_SYMPTOMS -> {
-                    readerTitle   = resources.getString(R.string.menu_about_what_is)
-                    readerContent = resources.getString(R.string.text_what_is)
-                    readerLink    = resources.getString(R.string.text_what_is_link)
+                    readerTitle   = resources.getString(R.string.menu_about_symptoms)
+                    readerContent = resources.getString(R.string.text_symptoms)
+                    readerLink    = resources.getString(R.string.text_symptoms_link)
                 }
                 Constants.CARD_DIAGNOSTICS -> {
-                    readerTitle   = resources.getString(R.string.menu_about_what_is)
-                    readerContent = resources.getString(R.string.text_what_is)
-                    readerLink    = resources.getString(R.string.text_what_is_link)
+                    readerTitle   = resources.getString(R.string.menu_about_diagnostic)
+                    readerContent = resources.getString(R.string.text_diagnosis)
+                    readerLink    = resources.getString(R.string.text_diagnosis_link)
                 }
                 Constants.CARD_TREATMENT -> {
-                    readerTitle   = resources.getString(R.string.menu_about_what_is)
-                    readerContent = resources.getString(R.string.text_what_is)
-                    readerLink    = resources.getString(R.string.text_what_is_link)
+                    readerTitle   = resources.getString(R.string.menu_about_treatment)
+                    readerContent = resources.getString(R.string.text_treatment)
+                    readerLink    = resources.getString(R.string.text_treatment_link)
                 }
                 Constants.CARD_STAGES -> {
                     readerTitle   = resources.getString(R.string.menu_about_what_is)

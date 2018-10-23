@@ -38,6 +38,15 @@ class AboutFragment : Fragment() {
         aboutView.card_what_is.setOnClickListener{
             showReaderActivity(aboutView.card_what_is,inflater.context)
         }
+        aboutView.card_symptoms.setOnClickListener{
+            showReaderActivity(aboutView.card_symptoms,inflater.context)
+        }
+        aboutView.card_diagnostic.setOnClickListener{
+            showReaderActivity(aboutView.card_diagnostic,inflater.context)
+        }
+        aboutView.card_treatment.setOnClickListener{
+            showReaderActivity(aboutView.card_treatment,inflater.context)
+        }
 
         return aboutView
     }
@@ -55,7 +64,7 @@ class AboutFragment : Fragment() {
             card_dementia -> textToRead = Constants.CARD_DEMENTIA
             else -> textToRead = 0
         }
-        readerActivity.putExtra("TEXT_TO_READ",textToRead)
+        readerActivity.putExtra(Constants.CARD_NUMBER_CLICKED,textToRead)
         startActivity(readerActivity)
     }
 }
