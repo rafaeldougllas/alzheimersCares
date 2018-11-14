@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ReaderActivity"></activity>
+        <receiver android:name=".AlarmBroadcastReceiver"></receiver>
     </application>
 
 </manifest>

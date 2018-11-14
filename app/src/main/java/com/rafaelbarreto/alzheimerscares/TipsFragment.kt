@@ -8,9 +8,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
+import kotlinx.android.synthetic.main.fragment_tips.*
+
 
 //1
 class TipsFragment : Fragment() {
+    val pdf_url:String = "http://bvsms.saude.gov.br/bvs/publicacoes/guia_pratico_cuidador.pdf"
     //2
     companion object {
         fun newInstance(): TipsFragment{
@@ -21,9 +25,13 @@ class TipsFragment : Fragment() {
     //3
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        print("aqqqqqqqq")
-        Log.d("RAFA","aqqqqqqqqq")
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tips, container, false)
+    }
+
+    override fun onStart() {
+        webView_tips.settings.javaScriptEnabled = true
+        webView_tips.loadUrl(pdf_url)
+        super.onStart()
     }
 }
