@@ -10,6 +10,7 @@ import android.os.Build
 import android.support.annotation.RequiresApi
 import android.util.Log
 import android.widget.Toast
+import com.rafaelbarreto.alzheimerscares.ui.MainActivity
 
 class AlarmBroadcastReceiver: BroadcastReceiver() {
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)

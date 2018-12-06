@@ -1,4 +1,4 @@
-package com.rafaelbarreto.alzheimerscares
+package com.rafaelbarreto.alzheimerscares.model
 
 
 data class Link (

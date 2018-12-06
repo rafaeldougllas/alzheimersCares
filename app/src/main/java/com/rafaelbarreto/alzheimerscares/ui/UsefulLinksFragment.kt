@@ -1,4 +1,4 @@
-package com.rafaelbarreto.alzheimerscares
+package com.rafaelbarreto.alzheimerscares.ui
 
 import android.content.Intent
 import android.net.Uri
@@ -9,6 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ListView
 import com.google.gson.Gson
+import com.rafaelbarreto.alzheimerscares.model.Link
+import com.rafaelbarreto.alzheimerscares.R
+import com.rafaelbarreto.alzheimerscares.adapter.UsefulLinksAdapter
 
 //1
 class UsefulLinksFragment : Fragment() {
@@ -17,7 +20,7 @@ class UsefulLinksFragment : Fragment() {
 
     //2
     companion object {
-        fun newInstance(): UsefulLinksFragment{
+        fun newInstance(): UsefulLinksFragment {
             return UsefulLinksFragment()
         }
     }
@@ -25,6 +28,8 @@ class UsefulLinksFragment : Fragment() {
     //3
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+
+        activity?.title = resources.getString(R.string.menu_useful_links)
 
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_useful_links, container, false)

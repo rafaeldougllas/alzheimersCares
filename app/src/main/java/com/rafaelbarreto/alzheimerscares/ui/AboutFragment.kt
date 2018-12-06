@@ -1,27 +1,23 @@
-package com.rafaelbarreto.alzheimerscares
+package com.rafaelbarreto.alzheimerscares.ui
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.CardView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import org.jetbrains.anko.*
+import com.rafaelbarreto.alzheimerscares.Constants
+import com.rafaelbarreto.alzheimerscares.R
 import kotlinx.android.synthetic.main.fragment_about.*
 import kotlinx.android.synthetic.main.fragment_about.view.*
-import org.jetbrains.anko.support.v4.find
-import org.jetbrains.anko.support.v4.startActivity
 
 //1
 class AboutFragment : Fragment() {
     //2
     companion object {
-        fun newInstance(): AboutFragment{
+        fun newInstance(): AboutFragment {
             return AboutFragment()
         }
     }
@@ -30,7 +26,7 @@ class AboutFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-
+        activity?.title = resources.getString(R.string.menu_about)
 
         // Inflate the layout for this fragment
         val aboutView = inflater.inflate(R.layout.fragment_about, container, false)

@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:padding="10dp"
         android:scrollbars="vertical"
-        tools:context=".AboutFragment">
+        tools:context=".ui.AboutFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,12 +35,11 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <!--<ImageView
+                    <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circleshape_blue"
-                        android:src="@drawable/ic_computer_black_24dp"
-                        android:padding="10dp"/>-->
+                        android:background="@drawable/ic_what_is"
+                        android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -79,12 +78,11 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <!--<ImageView
+                    <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circleshape_pink"
-                        android:src="@drawable/ic_library_black_24dp"
-                        android:padding="10dp"/>-->
+                        android:background="@drawable/ic_symptom"
+                        android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -130,12 +128,11 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <!--<ImageView
+                    <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circleshape_blue"
-                        android:src="@drawable/ic_computer_black_24dp"
-                        android:padding="10dp"/>-->
+                        android:background="@drawable/ic_diagnostic"
+                        android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -174,12 +171,11 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <!--<ImageView
+                    <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circleshape_pink"
-                        android:src="@drawable/ic_library_black_24dp"
-                        android:padding="10dp"/>-->
+                        android:background="@drawable/ic_treatment"
+                        android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -225,12 +221,11 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <!--<ImageView
+                    <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circleshape_blue"
-                        android:src="@drawable/ic_computer_black_24dp"
-                        android:padding="10dp"/>-->
+                        android:background="@drawable/ic_stages"
+                        android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -269,12 +264,11 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <!--<ImageView
+                    <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circleshape_pink"
-                        android:src="@drawable/ic_library_black_24dp"
-                        android:padding="10dp"/>-->
+                        android:background="@drawable/ic_research"
+                        android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -323,12 +317,11 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <!--<ImageView
+                    <ImageView
                         android:layout_width="64dp"
                         android:layout_height="63dp"
-                        android:background="@drawable/circleshape_purple"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_schools_black_24dp" />-->
+                        android:background="@drawable/ic_dementia"
+                        android:padding="10dp" />
 
                     <TextView
                         android:layout_width="wrap_content"

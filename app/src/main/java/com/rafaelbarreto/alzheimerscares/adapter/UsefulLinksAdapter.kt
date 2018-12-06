@@ -1,4 +1,4 @@
-package com.rafaelbarreto.alzheimerscares
+package com.rafaelbarreto.alzheimerscares.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.rafaelbarreto.alzheimerscares.model.Link
+import com.rafaelbarreto.alzheimerscares.R
 
 class UsefulLinksAdapter(private val context: Context?,
                          private val dataSource: ArrayList<Link>) : BaseAdapter() {
 
-    private val imagesIds = arrayOf(R.drawable.logo_abraz,R.drawable.logo_alz_org,R.drawable.logo_alzheimer_portugal,R.drawable.logo_alzheimermed,R.drawable.logo_alzheimers_net,R.drawable.logo_gaain_org,R.drawable.logo_psychiatry_org,R.drawable.logo_minhavida)
+    private val imagesIds = arrayOf(R.drawable.logo_abraz, R.drawable.logo_alz_org, R.drawable.logo_alzheimer_portugal, R.drawable.logo_alzheimermed, R.drawable.logo_alzheimers_net, R.drawable.logo_gaain_org, R.drawable.logo_psychiatry_org, R.drawable.logo_minhavida)
 
 
     private val inflater: LayoutInflater

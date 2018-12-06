@@ -1,19 +1,19 @@
-package com.rafaelbarreto.alzheimerscares
+package com.rafaelbarreto.alzheimerscares.ui
 
 import android.Manifest
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import com.maxcruz.reactivePermissions.ReactivePermissions
 import com.maxcruz.reactivePermissions.entity.Permission
+import com.rafaelbarreto.alzheimerscares.R
 import org.jetbrains.anko.*
 
 
@@ -114,6 +114,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         reacPermission.observeResultPermissions().subscribe{
             event ->
             if (event.second) {
+                Log.d("RAFAA","Ligou")
                 makeCall("999887766")
             }
         }

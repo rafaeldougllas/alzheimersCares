@@ -1,15 +1,13 @@
-package com.rafaelbarreto.alzheimerscares
+package com.rafaelbarreto.alzheimerscares.ui
 
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.support.annotation.RequiresApi
 import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat.getSystemService
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -17,10 +15,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
-import io.reactivex.plugins.RxJavaPlugins.reset
 import kotlinx.android.synthetic.main.fragment_reminders.*
-import kotlinx.android.synthetic.main.fragment_reminders.view.*
-import android.widget.*
+import com.rafaelbarreto.alzheimerscares.AlarmBroadcastReceiver
+import com.rafaelbarreto.alzheimerscares.R
 import java.util.*
 
 
@@ -31,7 +28,7 @@ class RemindersFragment : Fragment() {
 
     //2
     companion object {
-        fun newInstance(): RemindersFragment{
+        fun newInstance(): RemindersFragment {
             return RemindersFragment()
         }
     }
@@ -40,6 +37,7 @@ class RemindersFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+        activity?.title = resources.getString(R.string.menu_reminders)
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_reminders, container, false)

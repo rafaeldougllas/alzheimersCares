@@ -1,18 +1,15 @@
-package com.rafaelbarreto.alzheimerscares
+package com.rafaelbarreto.alzheimerscares.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.text.method.LinkMovementMethod
 import android.util.Log
 import android.view.MenuItem
-import com.rafaelbarreto.alzheimerscares.Constants.Companion.CARD_DEMENTIA
-import com.rafaelbarreto.alzheimerscares.Constants.Companion.CARD_DIAGNOSTICS
-import com.rafaelbarreto.alzheimerscares.Constants.Companion.CARD_RESEARCHES
-import com.rafaelbarreto.alzheimerscares.Constants.Companion.CARD_STAGES
-import com.rafaelbarreto.alzheimerscares.Constants.Companion.CARD_SYMPTOMS
-import com.rafaelbarreto.alzheimerscares.Constants.Companion.CARD_TREATMENT
-import com.rafaelbarreto.alzheimerscares.Constants.Companion.CARD_WHAT_IS
+import android.widget.ArrayAdapter
+import com.rafaelbarreto.alzheimerscares.Constants
+import com.rafaelbarreto.alzheimerscares.R
 import kotlinx.android.synthetic.main.activity_reader.*
+import kotlinx.android.synthetic.main.reader_footer.view.*
+import kotlinx.android.synthetic.main.reader_header.view.*
 
 class ReaderActivity : AppCompatActivity() {
 
@@ -71,9 +68,24 @@ class ReaderActivity : AppCompatActivity() {
             }
         }
 
-        reader_title.text   = readerTitle
-        reader_content.text = readerContent
-        reader_link.text    = readerLink
+        //reader_title.text   = readerTitle
+        //reader_content.text = readerContent
+        val texts = readerContent.split("#*")
+        val listTexts = arrayOfNulls<String>(texts.size)
+        for (i in 0 until texts.size){
+            listTexts[i] = texts[i]
+        }
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1,listTexts)
+        reader_list_content.adapter = adapter
+        val headerView = layoutInflater.inflate(R.layout.reader_header, null)
+        headerView.reader_title.text = readerTitle
+        reader_list_content.addHeaderView(headerView)
+
+        val footerView = layoutInflater.inflate(R.layout.reader_footer, null)
+        footerView.reader_link.text = readerLink
+        reader_list_content.addFooterView(footerView)
+
+        //reader_link.text    = readerLink
     }
 
     //To make back button work
