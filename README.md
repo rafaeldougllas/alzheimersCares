@@ -3,10 +3,10 @@
 > ( Kotlin + Room + Android Studio ) <br>
 
 ## Description
-* Chat application in real time, with visualization of other users, profile and chat room. <br>
+* Application to help caregivers and relatives of people with Alzheimer's, has features to learn more about the disease, useful links, reminders of everyday activities and other functionalities. <br>
 
 ## Target
-* App created in react native with the aim of practicing the knowledge of javascript, react native and firebase <br>
+* Application created in the discipline of mobile projects of the academic master's degree from UFRPE. <br>
 
 ## Screens
 ### Home Screen
@@ -23,10 +23,7 @@
 <img src="app/src/main/res/drawable/about_screen.png" > <br>
 
 ## How to run
-* MacOs: In terminal, open the project directory and executes the following code:
-```
-$ react-native run-ios --simulator='iPhone 7'
-```
+* Run from Android Studio
 
 ## Contact
 * Rafael.dougllas@gmail.com <br>
